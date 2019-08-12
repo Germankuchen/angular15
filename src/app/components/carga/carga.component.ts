@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Item } from '../../models/item';
 
 @Component({
   selector: 'app-carga',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargaComponent implements OnInit {
 
+  archivos: Item[];
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  cargarImagen() {
+
   }
 
 }
