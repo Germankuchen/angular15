@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../../models/item';
+import { CargaImagenService } from '../../services/carga-imagen.service';
 
 @Component({
   selector: 'app-carga',
@@ -8,15 +9,26 @@ import { Item } from '../../models/item';
 })
 export class CargaComponent implements OnInit {
 
-  archivos: Item[];
+  archivos: Item[] = [];
+  estaSobreDrop = false;
 
-  constructor() { }
+  constructor(private cargaImagen: CargaImagenService) { }
 
   ngOnInit() {
   }
 
-  cargarImagen() {
+  estaSobre(event: boolean) {
+    console.log(event);
+    this.estaSobreDrop = event;
+  }
 
+  cargarImagen() {
+    this.cargaImagen.cargarImagenes(this.archivos);
+  }
+
+  estaFuera(event: boolean) {
+    console.log(event);
+    this.estaSobreDrop = event;
   }
 
 }

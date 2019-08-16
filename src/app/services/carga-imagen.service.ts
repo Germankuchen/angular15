@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Item } from '../models/item';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +7,10 @@ import { Injectable } from '@angular/core';
 export class CargaImagenService {
 
   constructor() { }
+
+  cargarImagenes(imagenes: Item[]) {
+    console.log(imagenes);
+  }
+
+
 }

@@ -7,13 +7,15 @@ import { CargaComponent } from './components/carga/carga.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { APP_ROUTING } from './app.routes';
 import { CargaImagenService } from './services/carga-imagen.service';
+import { NgDropFilesDirective } from './directives/ng-drop-files.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FotosComponent,
     CargaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NgDropFilesDirective
   ],
   imports: [
     BrowserModule,
