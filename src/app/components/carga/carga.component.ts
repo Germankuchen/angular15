@@ -26,6 +26,10 @@ export class CargaComponent implements OnInit {
     this.cargaImagen.cargarImagenes(this.archivos);
   }
 
+  limpiar() {
+    this.archivos.length = 0;
+  }
+
   estaFuera(event: boolean) {
     console.log(event);
     this.estaSobreDrop = event;

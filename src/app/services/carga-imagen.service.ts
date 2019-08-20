@@ -10,6 +10,7 @@ export class CargaImagenService {
 
   cargarImagenes(imagenes: Item[]) {
     console.log(imagenes);
+    localStorage.setItem('imagenes', JSON.stringify(imagenes));
   }
 
 
